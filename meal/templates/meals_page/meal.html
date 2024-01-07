@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand text-danger" href="{% url 'home' %}"><b>Yumme</b><span class="text-danger">.</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     <div class="d-flex flex-row-reverse">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav d-flex">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'meals' %}">Show Item</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">About us</a>
+          </li>
+        </ul>
+      </div>
+     </div>
+  </div>
+</nav>
+
+
+<div class="container mt-5">
+    <div class="row">
+
+        {% for i in meals.categories %}
+
+        <div class="col-4 my-3">
+            <div class="card" style="width: 18rem;">
+                <img src="{{i.strCategoryThumb}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{i.idCategory}}</h5>
+                  <h5 class="card-title">{{i.strCategory}}</h5>
+                  <p class="card-text">{{i.strCategoryDescription | truncatewords:10}}</p>
+                </div>
+              </div>
+        </div>
+  
+        {% endfor %}
+
+    </div>
+</div>
+
+
+<div class="bg-dark py-5 mt-5">
+  <div class="container">
+      <div class="row">
+          <div class="col-3">
+              <div class="d-flex ">
+                <div class="mx-2">
+                   <!-- <i class='bx bxs-heart bx-border-circle fs-4'></i> -->
+                   <i class='bx bx-location-plus fs-4 text-white'></i>
+                </div>
+                 <div class="text-white">
+                   <h5><b>Address</b></h5>
+                   <p class="mb-0">A108 Adam Street</p>
+                   <p>New York, NY 535022 - US</p>
+                 </div>
+              </div>
+          </div>
+          <div class="col-3">
+              <div class="d-flex ">
+                <div class="mx-2">
+                   <!-- <i class='bx bxs-heart bx-border-circle fs-4'></i> -->
+                    
+                   <i class='bx bxs-phone fs-4 text-white'></i>
+                </div>
+                 <div class="text-white">
+                   <h5><b>Reservations</b></h5>
+                   <p class="mb-0">Phone: +1 5589 55488 55</p>
+                   <p>Email: info@example.com</p>
+                 </div>
+              </div>
+          </div>
+          <div class="col-3">
+              <div class="d-flex ">
+                <div class="mx-2">
+                  <i class='bx bx-stopwatch fs-4 text-white'></i>
+                   
+                </div>
+                 <div class="text-white">
+                   <h5><b>Opening Hours</b></h5>
+                   <p class="mb-0">Mon-Sat: 11AM - 23PM</p>
+                   <p>Sunday: Closed</p>
+                 </div>
+              </div>
+          </div>
+          <div class="col-3">
+              <div>
+
+                  <div class="text-white">
+                      <h5><b>Follow us</b></h5>
+                    </div>
+                <div class="">
+                    <i class='bx bxl-facebook-circle  fs-4 text-white'></i> 
+                    <i class='bx bxl-instagram fs-4 text-white mx-1' ></i>
+                    <i class='bx bxl-youtube fs-4 text-white mx-1' ></i>
+                    <i class='bx bxl-tiktok fs-4 text-white mx-1' ></i>
+                </div>
+                
+              </div>
+          </div>
+          
+           
+          
+      </div>
+      <hr class="bg-white">
+
+      <div class="text-center text-white pt-3">
+           <p>
+              © Copyright <b>Yummy.</b> All Rights Reserved <br>
+              Designed by <b>Majharulislam</b>
+           </p>
+      </div>
+
+ </div>
+</div>
+
+{%endblock%}

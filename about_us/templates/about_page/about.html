@@ -1,0 +1,228 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+ 
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container">
+    <a class="navbar-brand text-danger" href="{% url 'home' %}"><b>Yumme</b><span class="text-danger">.</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     <div class="d-flex flex-row-reverse">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav d-flex">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'meals' %}">Show Item</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'about' %}">About us</a>
+          </li>
+        </ul>
+      </div>
+     </div>
+  </div>
+</nav>
+
+    <div class="container">
+         <div class="py-4 text-center">
+               <h1>About Us</h1>
+         </div>
+
+          <div class="row py-5">
+                <div class="col-6">
+                     <div class="row">
+                         <div class="col">
+                            <div>
+                                <img width="100%" src="{% static 'img/about-1.jpg' %}" alt="about-1">
+                            </div>
+                         </div>
+                         <div class="col">
+                            <img width="100%" src="{% static 'img/about-2.jpg' %}" alt="about-1">
+                         </div>
+                     </div>
+                </div>
+                <div class="col-6">
+                       <div>
+                            <div class="text-center py-4">
+                                <h1>
+                                    Yumme<span class="text-danger">.</span> <br>
+                                    Restaurant
+                                </h1>
+                            </div>
+                            <div class="py-4">
+                                 <p class="fs-4 text-muted">
+                                    A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+                                    <br>
+                                    <br>
+                                    Mon - Fri <b>8 AM - 11 PM</b>
+                                 </p>
+                            </div>
+                            <div>
+                                  <h1 class="text-danger"> <b>+ 1-978-123-4567</b></h1>
+                            </div>
+                       </div>
+
+                </div>
+          </div>
+
+          <div class="py-4 text-center">
+            <h1>Catering Services</h1>
+          </div>
+
+            <div class="row pt-4">
+                  <div class="col">
+                       <div class=" text-center">
+                        <i class='bx bx-cake text-danger fs-1'></i>
+                             <h4>Birthday Party </h4>
+                             <p class="text-muted">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                       </div>
+                  </div>
+                  <div class="col">
+                       <div class=" text-center">
+                        <i class='bx bx-message-rounded-dots text-danger fs-1'></i>
+                             <h4>Business Meetings </h4>
+                             <p class="text-muted">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                       </div>
+                  </div>
+                  <div class="col">
+                       <div class=" text-center">
+                        <i class='bx bx-party text-danger fs-1'></i>
+                             <h4>Wedding Party </h4>
+                             <p class="text-muted">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
+                       </div>
+                  </div>
+                   
+            </div>
+      
+
+            <div class="py-4 text-center">
+                <h1>Our Master Chef</h1>
+            </div>
+             
+            <div class="row py-3">
+
+                 <div class="col">
+                    <div class="card">
+                        <img width="100%" src="{% static 'img/chef-1.jpg'%}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">John Smooth</h5>
+                          <p class="card-text text-muted"> Restaurant Owner</p>
+                        </div>
+                      </div>
+                 </div>
+                 <div class="col">
+                    <div class="card">
+                        <img width="100%" src="{% static 'img/chef-2.jpg'%}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Rebeca Welson</h5>
+                          <p class="card-text text-muted"> Head Chef</p>
+                        </div>
+                      </div>
+                 </div>
+                 <div class="col">
+                    <div class="card">
+                        <img width="100%" src="{% static 'img/chef-3.jpg'%}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Kharl Branyt</h5>
+                          <p class="card-text text-muted"> Chef</p>
+                        </div>
+                      </div>
+                 </div>
+                 <div class="col">
+                    <div class="card">
+                        <img width="100%" src="{% static 'img/chef-4.jpg'%}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Luke Simon</h5>
+                          <p class="card-text text-muted"> Chef</p>
+                        </div>
+                      </div>
+                 </div>
+
+
+            </div>
+    </div>
+
+
+    <div class="bg-dark py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <div class="d-flex ">
+                      <div class="mx-2">
+                         <!-- <i class='bx bxs-heart bx-border-circle fs-4'></i> -->
+                         <i class='bx bx-location-plus fs-4 text-white'></i>
+                      </div>
+                       <div class="text-white">
+                         <h5><b>Address</b></h5>
+                         <p class="mb-0">A108 Adam Street</p>
+                         <p>New York, NY 535022 - US</p>
+                       </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="d-flex ">
+                      <div class="mx-2">
+                         <!-- <i class='bx bxs-heart bx-border-circle fs-4'></i> -->
+                          
+                         <i class='bx bxs-phone fs-4 text-white'></i>
+                      </div>
+                       <div class="text-white">
+                         <h5><b>Reservations</b></h5>
+                         <p class="mb-0">Phone: +1 5589 55488 55</p>
+                         <p>Email: info@example.com</p>
+                       </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="d-flex ">
+                      <div class="mx-2">
+                        <i class='bx bx-stopwatch fs-4 text-white'></i>
+                         
+                      </div>
+                       <div class="text-white">
+                         <h5><b>Opening Hours</b></h5>
+                         <p class="mb-0">Mon-Sat: 11AM - 23PM</p>
+                         <p>Sunday: Closed</p>
+                       </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div>
+    
+                        <div class="text-white">
+                            <h5><b>Follow us</b></h5>
+                          </div>
+                      <div class="">
+                          <i class='bx bxl-facebook-circle  fs-4 text-white'></i> 
+                          <i class='bx bxl-instagram fs-4 text-white mx-1' ></i>
+                          <i class='bx bxl-youtube fs-4 text-white mx-1' ></i>
+                          <i class='bx bxl-tiktok fs-4 text-white mx-1' ></i>
+                      </div>
+                      
+                    </div>
+                </div>
+                
+                 
+                
+            </div>
+            <hr class="bg-white">
+    
+            <div class="text-center text-white pt-3">
+                 <p>
+                    © Copyright <b>Yummy.</b> All Rights Reserved <br>
+                    Designed by <b>Majharulislam</b>
+                 </p>
+            </div>
+    
+       </div>
+      </div>
+
+{%endblock%}
+
+
+
+
+
